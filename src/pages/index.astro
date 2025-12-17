@@ -1,16 +1,192 @@
 ---
-
+const name = "Melissa Murphy";
+const title = "Registrar & Administrative Specialist";
+const location = "Davis, CA";
+const email = "melissamurphy.ca@gmail.com";
+const phone = "415-730-1494";
+const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
 ---
 
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{name} | {title}</title>
+    <meta
+      name="description"
+      content="Resume website for Melissa Murphy — registrar and administrative specialist focused on operations, coordination, and calm, clear communication."
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Arial,
+          sans-serif;
+        line-height: 1.5;
+      }
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 48px 20px;
+      }
+      header {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+      h1 {
+        font-size: 2.1rem;
+        margin: 0;
+        letter-spacing: -0.02em;
+      }
+      .sub {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        opacity: 0.85;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .card {
+        border: 1px solid rgba(127, 127, 127, 0.25);
+        border-radius: 14px;
+        padding: 18px;
+        margin: 16px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      @media (min-width: 820px) {
+        .grid {
+          grid-template-columns: 1.2fr 0.8fr;
+        }
+      }
+      h2 {
+        font-size: 1.2rem;
+        margin: 0 0 10px;
+      }
+      ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+      .pillrow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+      }
+      .pill {
+        border: 1px solid rgba(127, 127, 127, 0.25);
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+      footer {
+        margin-top: 30px;
+        opacity: 0.7;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>{name}</h1>
+        <div class="sub">
+          <span>{title}</span>
+          <span>•</span>
+          <span>{location}</span>
+        </div>
+        <div class="sub">
+          <a href={`mailto:${email}`}>{email}</a>
+          <span>•</span>
+          <a href={`tel:${phone.replace(/[^0-9+]/g, "")}`}>{phone}</a>
+          <span>•</span>
+          <a href={linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </header>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Summary</h2>
+          <p>
+            I’m a school registrar and administrative specialist with 25+ years
+            of experience supporting high-volume, high-stakes communication and
+            keeping systems running smoothly. I’m known for calm clarity, strong
+            follow-through, and building practical processes that make work
+            easier.
+          </p>
+          <div class="pillrow">
+            <span class="pill">Operations support</span>
+            <span class="pill">Process improvement</span>
+            <span class="pill">Stakeholder communication</span>
+            <span class="pill">Records & compliance</span>
+            <span class="pill">Docs + spreadsheets</span>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h2>Focus</h2>
+          <ul>
+            <li>Ops / program coordination</li>
+            <li>Client onboarding / implementation support</li>
+            <li>Administrative systems + communication</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="card">
+        <h2>Selected Experience</h2>
+        <ul>
+          <li>
+            <strong
+              >Registrar & Counseling Secretary (Administrative Assistant II)</strong
+            > — Holmes Junior High (DJUSD)
+          </li>
+          <li>
+            <strong>Section Lead</strong> — Lambda School (student ops + systems)
+          </li>
+          <li>
+            <strong
+              >Customer Support → Technical Support → Credit & Collections</strong
+            > — Headsets.com
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <strong>ClassCountdown</strong> — bell schedule + in-class activity countdown
+            app (React Native / Firebase)
+          </li>
+          <li>
+            <strong>Communication services</strong> — email rewrites, phone scripts,
+            inbox support (freelance)
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        <span>Built with Astro.</span>
+      </footer>
+    </main>
+  </body>
 </html>
