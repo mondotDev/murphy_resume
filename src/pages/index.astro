@@ -1,10 +1,16 @@
 ---
-const name = "Melissa Murphy";
-const title = "Registrar & Administrative Specialist";
-const location = "Davis, CA";
+const name = "Melissa L. Murphy";
+const title = "Operations & Customer Support Leader";
+const location = "Greater Sacramento Area, CA";
 const email = "melissamurphy.ca@gmail.com";
 const phone = "415-730-1494";
 const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
+const canonicalUrl = "https://www.melissalmurphy.com/";
+const ogImage = "https://www.melissalmurphy.com/og-image.jpg";
+
+// Current PDF filename (confirmed)
+const resumePdfHref = "/Melissa_Murphy_Resume.pdf";
+const resumePdfLabel = "Resume (PDF)";
 ---
 
 <!doctype html>
@@ -12,49 +18,35 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Melissa Murphy | Operations & Administrative Specialist</title>
-
-    <meta
-      name="description"
-      content="Operations and administrative specialist with 25+ years of experience in coordination, documentation, and calm, high-stakes communication."
-    />
-
-    <!-- Open Graph / LinkedIn -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Melissa Murphy | Operations & Administrative Specialist"
-    />
-    <meta
-      property="og:description"
-      content="Operations and administrative specialist with 25+ years of experience supporting complex workflows, coordination, and communication."
-    />
-    <meta property="og:url" content="https://www.melissalmurphy.com/" />
-    <meta
-      property="og:image"
-      content="https://www.melissalmurphy.com/og-image.jpg"
-    />
-
-    <!-- Twitter (used by some platforms) -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Melissa Murphy | Operations & Administrative Specialist"
-    />
-    <meta
-      name="twitter:description"
-      content="Operations and administrative specialist with deep experience in coordination, documentation, and stakeholder communication."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.melissalmurphy.com/og-image.jpg"
-    />
 
     <title>{name} | {title}</title>
     <meta
       name="description"
-      content="Resume website for Melissa Murphy — registrar and administrative specialist focused on operations, coordination, and calm, clear communication."
+      content="Operations & customer support leader with experience in education, remote support operations, escalations, process improvement, metrics tracking, and team coaching."
     />
+
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${name} | ${title}`} />
+    <meta
+      property="og:description"
+      content="Operations & customer support leader with experience in education, support ops, escalations, process improvement, and calm, high-stakes communication."
+    />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter (used by some platforms) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${name} | ${title}`} />
+    <meta
+      name="twitter:description"
+      content="Operations & customer support leader with experience in education, support ops, escalations, and process improvement."
+    />
+    <meta name="twitter:image" content={ogImage} />
+
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -207,6 +199,7 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
           <span>•</span>
           <span>{location}</span>
         </div>
+
         <div class="sub">
           <a href={`mailto:${email}`}>{email}</a>
           <span>•</span>
@@ -214,12 +207,8 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
           <span>•</span>
           <a href={linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           <span>•</span>
-          <a
-            href="/Melissa_Murphy_Operations_Resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Resume (PDF)
+          <a href={resumePdfHref} target="_blank" rel="noreferrer" download>
+            {resumePdfLabel}
           </a>
         </div>
       </header>
@@ -228,27 +217,30 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
         <div class="card">
           <h2>Summary</h2>
           <p>
-            I’m a school registrar and administrative specialist with 25+ years
-            of experience supporting high-volume, high-stakes communication and
-            keeping systems running smoothly. I’m known for calm clarity, strong
-            follow-through, and building practical processes that make work
-            easier.
+            I’m an operations and customer support leader with experience in
+            education-focused, high-volume, and remote-first environments. I’ve
+            overseen support workflows, guided team leads through complex
+            escalations, tracked performance signals, and built SOPs and tools
+            that make systems run smoothly—especially when stakes are high.
           </p>
           <div class="pillrow">
-            <span class="pill">Operations support</span>
+            <span class="pill">Support operations</span>
+            <span class="pill">Escalation management</span>
+            <span class="pill">Team coaching</span>
             <span class="pill">Process improvement</span>
-            <span class="pill">Stakeholder communication</span>
+            <span class="pill">SOPs + documentation</span>
             <span class="pill">Records & compliance</span>
-            <span class="pill">Docs + spreadsheets</span>
           </div>
         </div>
 
         <aside class="card">
           <h2>Focus</h2>
           <ul>
-            <li>Ops / program coordination</li>
-            <li>Client onboarding / implementation support</li>
-            <li>Administrative systems + communication</li>
+            <li>Support operations / customer experience</li>
+            <li>Team leadership, coaching, and escalations</li>
+            <li>
+              Operations coordination, documentation, and systems improvement
+            </li>
           </ul>
         </aside>
       </section>
@@ -274,16 +266,16 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
               in-person requests in a compliance-driven environment.
             </li>
             <li>
-              Manage student records, enrollment, and sensitive documentation in
-              alignment with district and state requirements.
+              Serve as an escalation point for complex cases involving
+              attendance, STIS, grades, and policy interpretation.
             </li>
             <li>
-              Serve as a primary point of contact for families, counselors, and
-              administrators during time-sensitive situations.
+              Train and onboard new registrars, sharing workflows, tools, and
+              documentation standards across sites.
             </li>
             <li>
-              Create, maintain, and improve forms, templates, and documentation
-              that streamline attendance and records workflows.
+              Build and improve forms, templates, SOPs, and tracking systems
+              that streamline records and attendance workflows.
             </li>
           </ul>
         </div>
@@ -292,7 +284,7 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
           <div
             style="display:flex; flex-wrap:wrap; gap:10px; align-items:baseline;"
           >
-            <strong>Student Support Operations / Operations Lead</strong>
+            <strong>Section Lead, Student Support Operations</strong>
             <span style="opacity:.75;">Lambda School (BloomTech)</span>
             <span style="opacity:.75;">• Remote</span>
             <span style="opacity:.75;">• Jul 2019 – Jun 2021</span>
@@ -303,16 +295,17 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
               15 Team Leads simultaneously.
             </li>
             <li>
-              Advised Team Leads on prioritization, sensitive issue handling,
-              and student communication.
+              Oversaw support operations at the team level; coached leads on
+              prioritization, sensitive issue handling, and student
+              communication.
             </li>
             <li>
-              Coordinated workflows across student support, curriculum, and
-              operations teams in a fast-paced SaaS environment.
+              Monitored team-level indicators (engagement, progress, resolution
+              signals) to spot trends and guide performance.
             </li>
             <li>
               Standardized documentation, escalation paths, and communication
-              practices during periods of rapid growth.
+              practices during rapid growth.
             </li>
           </ul>
         </div>
@@ -327,16 +320,16 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
           </div>
           <ul>
             <li>
-              Led business development and marketing initiatives supporting
-              company growth and client acquisition.
+              Led business development and operations-facing marketing
+              initiatives supporting company growth and client acquisition.
             </li>
             <li>
-              Managed website content, updates, and optimization to support
-              inbound inquiries and brand presence.
+              Owned website content and inbound communication workflows to
+              support customer experience and lead flow.
             </li>
             <li>
-              Developed proposals, marketing copy, and client-facing materials
-              aligned with business goals.
+              Developed proposals, client-facing materials, and internal forms
+              supporting onboarding and project kickoff.
             </li>
           </ul>
         </div>
@@ -354,7 +347,7 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
           <ul>
             <li>
               Supported small businesses and professional service clients with
-              communication, marketing, and operational workflows.
+              customer communications and operational workflows.
             </li>
             <li>
               Developed and maintained CMS-based websites, client-facing forms,
@@ -372,7 +365,7 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
             style="display:flex; flex-wrap:wrap; gap:10px; align-items:baseline;"
           >
             <strong
-              >Customer Service, Technical Support, Credit & Collections</strong
+              >Customer Support → Technical Support → Credit & Collections</strong
             >
             <span style="opacity:.75;">Headsets.com</span>
             <span style="opacity:.75;">• 2004 – 2006</span>
@@ -399,7 +392,7 @@ const linkedin = "https://www.linkedin.com/in/melissalmurphy/";
         <ul>
           <li>
             <strong>ClassCountdown</strong> — bell schedule + in-class activity countdown
-            app (React Native / Firebase)
+            app for teachers (React / Firebase)
           </li>
           <li>
             <strong>Communication services</strong> — email rewrites, phone scripts,
